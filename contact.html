@@ -2,72 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - V OK Health Insurance</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <img src="b.png" alt="V OK Health Insurance Logo" class="logo"/>
+    <img src="b.png" alt="V OK Health Insurance Logo" class="logo" />
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Find the Right Health Plan with Confidence</h1>
-    <p>We offer free consultations on both private & public insurance plans. Let’s make sure your doctors & medications are covered—and check if you qualify for tax subsidies.</p>
-    <a href="#contact" class="btn">Book Your Free Call</a>
-  </section>
+  <main>
+    <section class="contact-page">
+      <h1>Contact Us</h1>
+      <p>We’re here to help! Please fill out the form below to get in touch for your free consultation.</p>
 
-  <section id="services" class="services">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>✅ Free consultations for individuals & families</li>
-      <li>✅ Private & public plan options</li>
-      <li>✅ Coverage checks for doctors & prescriptions</li>
-      <li>✅ Tax subsidy screening in 33 states</li>
-    </ul>
-  </section>
+      <form action="https://formspree.io/f/xwpbeldk" method="POST" id="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
 
-  <section id="about" class="about">
-    <h2>About V OK Health Insurance</h2>
-    <p>We make health insurance simple. With services available in 33 states, we guide you to the right coverage—whether you're shopping for a new plan or checking if you qualify for better rates.</p>
-  </section>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required />
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Ready to get started? Reach out for your free consultation.</p>
-    <form action="https://formspree.io/f/xwpbeldk" method="POST">
-      <label for="name">Your name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
 
-      <label for="email">Your email</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required />
+        <button type="submit">Send Message</button>
+      </form>
 
-      <label for="message">Your message</label>
-      <textarea id="message" name="message" placeholder="Your message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <section id="calendar" class="calendar">
-    <h2>Book a Call</h2>
-    <!-- Calendly inline widget begin -->
-    <div 
-      class="calendly-inline-widget" 
-      data-url="https://calendly.com/venusotero-usha/30min?background_color=%23f4f4f4&text_color=%233b3937&primary_color=%23f8c8d8" 
-      style="min-width:320px;height:700px;">
-    </div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
-  </section>
+      <section id="calendar" class="calendar">
+        <h2>Or Book a Call Directly</h2>
+        <!-- Calendly inline widget begin -->
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/venusotero-usha/30min?background_color=%23f4f4f4&text_color=%233b3937&primary_color=%23f8c8d8"
+          style="min-width:320px; height:700px;"
+        ></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </section>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
