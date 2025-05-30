@@ -6,9 +6,9 @@ body {
   color: #333;
 }
 
-/* header */
+/* Header */
 header {
-  background-color: #005fa3;
+  background-color: #005fa3; /* deep blue */
   color: white;
   padding: 20px;
   display: flex;
@@ -18,8 +18,13 @@ header {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px; /* adjust size as needed */
+  width: auto;
 }
 
 nav ul {
@@ -27,6 +32,7 @@ nav ul {
   display: flex;
   gap: 20px;
   padding-left: 0;
+  margin: 0;
 }
 
 nav a {
@@ -35,9 +41,9 @@ nav a {
   font-weight: 500;
 }
 
-/* hero */
+/* Hero Section */
 .hero {
-  background-color: #e6f2ff;
+  background-color: #e6f2ff; /* light blue */
   padding: 60px 20px;
   text-align: center;
 }
@@ -53,7 +59,7 @@ nav a {
 }
 
 .hero .btn {
-  background-color: #ffc107;
+  background-color: #ffc107; /* yellow button */
   color: black;
   padding: 12px 20px;
   font-size: 16px;
@@ -62,7 +68,7 @@ nav a {
   font-weight: bold;
 }
 
-/* services */
+/* Services Section */
 .services {
   padding: 40px 20px;
   background-color: #fff;
@@ -82,13 +88,13 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* about */
+/* About Section */
 .about {
   padding: 40px 20px;
-  background-color: #f0f8ff;
+  background-color: #f0f8ff; /* very light blue */
 }
 
-/* contact */
+/* Contact Section */
 .contact {
   padding: 40px 20px;
   background-color: #fff;
@@ -122,7 +128,7 @@ nav a {
   cursor: pointer;
 }
 
-/* footer */
+/* Footer */
 footer {
   background-color: #005fa3;
   color: white;
