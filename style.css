@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* Header */
+/* header */
 header {
   background-color: #005fa3;
   color: white;
@@ -35,7 +35,7 @@ nav a {
   font-weight: 500;
 }
 
-/* Hero Section */
+/* hero */
 .hero {
   background-color: #e6f2ff;
   padding: 60px 20px;
@@ -62,7 +62,7 @@ nav a {
   font-weight: bold;
 }
 
-/* Services Section */
+/* services */
 .services {
   padding: 40px 20px;
   background-color: #fff;
@@ -82,13 +82,13 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* About Section */
+/* about */
 .about {
   padding: 40px 20px;
   background-color: #f0f8ff;
 }
 
-/* Contact Section */
+/* contact */
 .contact {
   padding: 40px 20px;
   background-color: #fff;
@@ -122,7 +122,7 @@ nav a {
   cursor: pointer;
 }
 
-/* Footer */
+/* footer */
 footer {
   background-color: #005fa3;
   color: white;
