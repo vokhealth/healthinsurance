@@ -1,183 +1,295 @@
-/* Reset & basics */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General styles */
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
   background-color: #f4f4f4;
   color: #3b3937;
-  line-height: 1.6;
 }
 
 header {
+  background-color: #0f4c81; /* brand blue */
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 180px;
   height: auto;
-  display: block;
-}
-
-/* Responsive logo */
-@media (max-width: 600px) {
-  .logo {
-    max-width: 150px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-  }
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
+  color: white;
   text-decoration: none;
-  color: #3b3937;
   font-weight: 600;
-  padding: 5px 0;
-  transition: color 0.3s;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #f8c8d8; /* blush pink */
+  background-color: #f8c8d8; /* brand pink */
+  color: #0f4c81;
 }
 
+/* Hero Section */
 .hero {
-  background: white;
-  padding: 60px 30px;
+  background-color: #f8c8d8; /* pink background */
   text-align: center;
+  padding: 60px 20px;
 }
 
 .hero h1 {
+  margin: 0 0 15px 0;
+  font-weight: 600;
   font-size: 2.8rem;
-  margin-bottom: 20px;
+  color: #0f4c81;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
   max-width: 600px;
-  margin: 0 auto 30px auto;
-  color: #3b3937cc;
+  margin-left: auto;
+  margin-right: auto;
+  color: #3b3937;
 }
 
 .btn {
-  background-color: #f8c8d8;
-  color: #3b3937;
-  padding: 12px 30px;
-  font-weight: 600;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #0f4c81;
+  color: white;
+  padding: 15px 35px;
   text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
   font-size: 1rem;
   display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #e3b9c2;
+  background-color: #093254;
 }
 
-section {
-  padding: 50px 30px;
-  background: white;
-  margin: 20px auto;
+/* Services Section */
+.services {
+  padding: 40px 30px;
   max-width: 900px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 0 auto 60px auto;
+}
+
+.services h2 {
+  text-align: center;
+  color: #0f4c81;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .services ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #3b3937;
 }
 
 .services ul li {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+}
+
+/* About Section */
+.about {
+  background-color: white;
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+  color: #0f4c81;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .about p {
   font-size: 1.1rem;
-  color: #3b3937cc;
+  color: #3b3937;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+  background-color: white;
+  padding: 40px 30px;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  color: #0f4c81;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #3b3937;
+  margin-bottom: 25px;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
 .contact label {
   font-weight: 600;
+  color: #0f4c81;
+  margin-bottom: 6px;
 }
 
-.contact input[type="text"],
-.contact input[type="email"],
+.contact input,
 .contact textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px 15px;
   font-size: 1rem;
-  font-family: inherit;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
   resize: vertical;
-  min-height: 40px;
+  font-family: 'Poppins', sans-serif;
+  color: #3b3937;
 }
 
 .contact textarea {
-  min-height: 100px;
+  min-height: 120px;
+  max-height: 180px;
 }
 
 .contact button {
   width: 150px;
-  padding: 12px;
-  background-color: #f8c8d8;
+  background-color: #0f4c81;
+  color: white;
   border: none;
   border-radius: 4px;
+  padding: 14px 0;
   font-weight: 600;
   cursor: pointer;
-  color: #3b3937;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-  background-color: #e3b9c2;
+  background-color: #093254;
 }
 
+/* Calendar Section */
 .calendar {
-  max-width: 900px;
-  margin: 20px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9rem;
-  color: #3b3937cc;
+.calendar h2 {
+  color: #0f4c81;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Blog Section */
+.blog-intro {
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #3b3937;
+}
+
+.blog-posts article {
   background: white;
-  border-top: 1px solid #ddd;
-  margin-top: 40px;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  color: #3b3937;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer */
+footer {
+  background-color: #0f4c81;
+  color: white;
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  nav ul {
+    gap: 15px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    max-width: 140px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .services, .about, .contact, .calendar {
+    padding: 30px 15px;
+  }
+
+  .contact form {
+    gap: 14px;
+  }
 }
