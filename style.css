@@ -1,140 +1,194 @@
-/* Reset & base styles */
-body {
+/* Reset & Base Styles */
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f9f9f9;
-  color: #3b3937;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #3b3937;
+  line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: #3b3937;
+  background-color: #2e2e2e; /* charcoal gray */
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
-
 .logo {
-  height: 50px;
-  max-width: 150px;
+  height: 60px;
+  transition: all 0.3s ease;
 }
-
 nav ul {
+  list-style: none;
   display: flex;
   gap: 20px;
 }
-
-nav a {
+nav ul li a {
   color: white;
+  text-decoration: none;
   font-weight: 600;
 }
-
-nav a.active {
-  text-decoration: underline;
+nav ul li a.active {
+  border-bottom: 2px solid #f8c8d8; /* blush pink */
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
+  background-color: #f8c8d8; /* blush pink */
   text-align: center;
   padding: 80px 20px;
-  background: #f4f4f4;
 }
-
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
+  margin-bottom: 15px;
 }
-
 .hero p {
+  font-size: 1.2em;
   max-width: 700px;
   margin: 0 auto 20px;
 }
-
-.btn {
+.hero .btn {
   display: inline-block;
-  background: #f8c8d8;
-  color: #3b3937;
-  padding: 12px 24px;
+  background: #2e2e2e;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 4px;
   font-weight: 600;
-  border-radius: 6px;
 }
 
-/* Services, About, Contact */
-section {
-  padding: 50px 20px;
-  max-width: 900px;
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.services h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.services ul {
+  list-style: none;
+  max-width: 600px;
   margin: 0 auto;
 }
+.services li {
+  margin-bottom: 12px;
+}
 
-form {
+/* Calendar Embed */
+.calendar {
+  padding: 60px 20px;
+}
+
+/* Contact Form */
+.contact {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
-input, textarea {
+.contact input,
+.contact textarea {
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 100%;
+  border-radius: 4px;
 }
-
-textarea {
-  min-height: 120px;
-}
-
-button[type="submit"] {
-  background: #3b3937;
-  color: white;
-  padding: 12px;
+.contact button {
+  background-color: #f8c8d8; /* blush pink */
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  padding: 12px;
+  font-weight: 600;
+  color: #2e2e2e;
+  border-radius: 4px;
   cursor: pointer;
 }
 
+/* Blog Section */
+.blog-intro {
+  padding: 60px 20px;
+  text-align: center;
+}
+.blog-posts {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+.blog-posts article {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Thank You Page */
+.thank-you {
+  padding: 100px 20px;
+  text-align: center;
+}
+.thank-you .btn {
+  margin-top: 20px;
+  background-color: #2e2e2e;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Footer */
 footer {
+  background-color: #2e2e2e;
+  color: white;
   text-align: center;
   padding: 20px;
-  font-size: 0.9rem;
-  background: #3b3937;
-  color: white;
 }
 
-/* Calendly widget */
-.calendar {
-  padding-top: 0;
-}
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+  .logo {
+    height: 40px;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+    background-color: #2e2e2e;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 20px;
   }
 
-  .logo {
-    max-width: 120px;
-    height: auto;
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
