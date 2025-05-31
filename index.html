@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>V OK Health Insurance</title>
-  <meta name="description" content="Helping you choose the right private and public health insurance plans in 33 states.">
-  <meta name="keywords" content="health insurance, private insurance, public insurance, free consultation, V OK Health Insurance">
-  <meta name="author" content="V OK Health Insurance">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="We offer free consultations for health insurance plans. Let’s find the right coverage for you.">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMZ7Z226BF"></script>
   <script>
@@ -20,10 +20,12 @@
 </head>
 <body>
   <header>
-    <a href="index.html"><img src="v.png" alt="V OK Logo" class="logo"/></a>
+    <a href="index.html"><img src="v.png" alt="V OK Health Insurance Logo" class="logo" /></a>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
     <nav>
-      <div class="menu-toggle">&#9776;</div>
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -34,7 +36,7 @@
 
   <section class="hero">
     <h1>Find the Right Health Plan with Confidence</h1>
-    <p>We offer free consultations on both private & public insurance plans. Let’s make sure your doctors & medications are covered—and check if you qualify for tax subsidies.</p>
+    <p>We offer free consultations on both private & public insurance plans.</p>
     <a href="#calendar" class="btn">Book Your Free Call</a>
   </section>
 
@@ -48,14 +50,23 @@
     </ul>
   </section>
 
-  <section id="calendar" class="calendar">
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xwpbeldk" method="POST">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section class="calendar">
     <h2>Book a Call</h2>
-    <div 
-      class="calendly-inline-widget" 
-      data-url="https://calendly.com/venusotero-usha/30min?background_color=f4f4f4&text_color=3b3937&primary_color=f8c8d8" 
-      style="min-width:320px;height:700px;">
-    </div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/venusotero-usha/30min?background_color=%23f4f4f4&text_color=%233b3937&primary_color=%23f8c8d8" style="min-width:320px;height:700px;"></div>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </section>
 
   <footer>
