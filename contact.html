@@ -2,57 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - V OK Health Insurance</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Contact V OK Health Insurance for your free consultation and support." />
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
+    <a href="index.html" class="logo-link">
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
     </a>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="contact">
-    <h1>Let's Connect</h1>
-    <p>If you're ready to explore your health insurance options, fill out the form below or book a call directly.</p>
-    <form action="https://formspree.io/f/xwpbeldk" method="POST">
-      <div class="form-group">
+  <main>
+    <section class="contact-page-content" style="max-width: 600px; margin: 30px auto; padding: 0 20px;">
+      <h1>Contact Us</h1>
+      <p>Ready to get started? Reach out for your free consultation.</p>
+      <form action="https://formspree.io/f/xwpbeldk" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required />
-      </div>
 
-      <div class="form-group">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Your email" required />
-      </div>
 
-      <div class="form-group">
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Your message" required></textarea>
-      </div>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <section class="calendar">
-    <h2>Book a Free Consultation</h2>
-    <div 
-      class="calendly-inline-widget" 
-      data-url="https://calendly.com/venusotero-usha/30min?background_color=%23f4f4f4&text_color=%233b3937&primary_color=%23f8c8d8" 
-      style="min-width:320px;height:700px;">
-    </div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  </section>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
