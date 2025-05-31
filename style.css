@@ -1,242 +1,157 @@
-/* Reset */
-* {
+/* Base Styles */
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #fdfdfd;
+  color: #3b3937;
+  line-height: 1.6;
 }
 
-/* Body and Typography */
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Header */
 header {
-  background-color: #3b3937; /* Charcoal gray */
+  background-color: #3b3937;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
   flex-wrap: wrap;
 }
 
 .logo {
-  height: 60px;
-  max-width: 160px;
-  object-fit: contain;
+  max-height: 60px;
+  width: auto;
 }
 
-/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: white;
+  color: #fff;
   font-weight: 600;
-  transition: color 0.3s;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 nav ul li a.active,
 nav ul li a:hover {
-  color: #f8c8d8; /* Blush pink accent */
-}
-
-/* Hero Section */
-.hero {
-  padding: 150px 30px 60px;
-  text-align: center;
-  background: #fff0f5;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #3b3937;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-}
-
-.btn {
   background-color: #f8c8d8;
   color: #3b3937;
-  border: none;
-  padding: 12px 25px;
-  font-weight: 600;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
 }
 
-.btn:hover {
-  background-color: #f5b0c7;
-}
-
-/* Section Layouts */
-section {
-  padding: 60px 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #3b3937;
-}
-
-/* Services */
-.services ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.services ul li {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-/* About */
-.about p {
-  font-size: 1.1rem;
-}
-
-/* Contact Form */
-.contact form {
-  display: flex;
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact label {
-  font-weight: 600;
-}
-
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: 'Inter', sans-serif;
-}
-
-.contact textarea {
-  min-height: 120px;
-}
-
-.contact button {
-  background-color: #f8c8d8;
-  color: #3b3937;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
   cursor: pointer;
 }
 
-.contact button:hover {
-  background-color: #f5b0c7;
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 
-/* Calendar */
-.calendar {
-  text-align: center;
-}
-
-/* Blog */
-.blog-intro {
-  text-align: center;
-  background-color: #fff0f5;
-  padding: 80px 30px 40px;
-}
-
-.blog-posts article {
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-/* FAQ */
-.faq-section {
-  margin-top: 60px;
-}
-
-.faq-section h2 {
-  text-align: center;
-}
-
-.faq-item {
-  margin-bottom: 20px;
-}
-
-.faq-item h3 {
-  color: #3b3937;
-  margin-bottom: 8px;
-}
-
-.faq-item p {
-  margin-left: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: #3b3937;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   nav ul {
     flex-direction: column;
+    width: 100%;
     display: none;
     background-color: #3b3937;
-    width: 100%;
-    padding: 10px;
   }
 
-  nav ul.show {
+  nav ul.active {
     display: flex;
   }
 
   .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-left: auto;
+    display: flex;
   }
 
   .logo {
-    max-width: 130px;
-    height: auto;
+    max-height: 45px;
   }
 }
 
-.menu-toggle {
-  display: none;
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #3b3937;
+}
+
+.hero .btn {
+  display: inline-block;
+  background-color: #f8c8d8;
+  color: #3b3937;
+  padding: 12px 20px;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.services ul {
+  padding-left: 20px;
+}
+
+.about, .contact, .calendar, .blog-posts, .faq-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  background-color: #f8c8d8;
+  color: #3b3937;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b3937;
+  color: #fff;
 }
