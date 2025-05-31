@@ -4,17 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <meta name="description" content="Reach out to V OK Health Insurance for free consultations on the best health coverage for your needs.">
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
-    </a>
+    <a href="index.html"><img src="v.png" alt="V OK Logo" class="logo"/></a>
     <nav>
-      <ul>
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
@@ -24,9 +22,9 @@
   </header>
 
   <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Ready to get started? Reach out for your free consultation.</p>
-    <form action="thankyou.html" method="GET">
+    <h1>Contact Us</h1>
+    <p>Reach out for a free consultation. We'll help you find the best plan.</p>
+    <form action="thank-you.html" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" placeholder="Your name" required />
 
@@ -40,11 +38,11 @@
     </form>
   </section>
 
-  <section id="calendar" class="calendar">
+  <section class="calendar">
     <h2>Book a Call</h2>
     <div 
       class="calendly-inline-widget" 
-      data-url="https://calendly.com/venusotero-usha/30min?background_color=%23f4f4f4&text_color=%233b3937&primary_color=%23f8c8d8" 
+      data-url="https://calendly.com/venusotero-usha/30min?background_color=f4f4f4&text_color=3b3937&primary_color=f8c8d8" 
       style="min-width:320px;height:700px;">
     </div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
