@@ -5,23 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About – V OK Health Insurance</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-  <script>
-  const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('showing');
-  });
-</script>
 <body>
   <header>
     <a href="index.html">
       <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
     </a>
     <nav>
-      <ul>
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -39,5 +32,11 @@
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
   </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').onclick = () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    };
+  </script>
 </body>
 </html>
