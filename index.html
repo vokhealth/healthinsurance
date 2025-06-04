@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>V OK Health Insurance</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <meta name="description" content="Free consultations for private and public health insurance plans. Covering 33 states.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Free consultations for private and public health insurance. Check if your doctor is covered and if you qualify for subsidies.">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMZ7Z226BF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,21 +15,14 @@
     gtag('config', 'G-GMZ7Z226BF');
   </script>
 </head>
-  <script>
-  const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('showing');
-  });
-</script>
 <body>
   <header>
     <a href="index.html">
       <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
     </a>
     <nav>
-      <ul>
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -44,7 +37,7 @@
     <a href="#calendar" class="btn">Book Your Free Call</a>
   </section>
 
-  <section id="services" class="services">
+  <section class="services">
     <h2>What We Offer</h2>
     <ul>
       <li>✅ Free consultations for individuals & families</li>
@@ -54,12 +47,12 @@
     </ul>
   </section>
 
-  <section id="about" class="about">
+  <section class="about">
     <h2>About V OK Health Insurance</h2>
     <p>We make health insurance simple. With services available in 33 states, we guide you to the right coverage—whether you're shopping for a new plan or checking if you qualify for better rates.</p>
   </section>
 
-  <section id="contact" class="contact">
+  <section class="contact">
     <h2>Contact Us</h2>
     <p>Ready to get started? Reach out for your free consultation.</p>
     <form action="https://formspree.io/f/xwpbeldk" method="POST">
@@ -78,16 +71,18 @@
 
   <section id="calendar" class="calendar">
     <h2>Book a Call</h2>
-    <div 
-      class="calendly-inline-widget" 
-      data-url="https://calendly.com/venusotero-usha/30min?background_color=%23f4f4f4&text_color=%233b3937&primary_color=%23f8c8d8" 
-      style="min-width:320px;height:700px;">
-    </div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/venusotero-usha/30min?background_color=%23f4f4f4&text_color=%233b3937&primary_color=%23f8c8d8" style="min-width:320px;height:700px;"></div>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </section>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
   </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').onclick = () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    };
+  </script>
 </body>
 </html>
