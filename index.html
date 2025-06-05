@@ -2,25 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-492132828');
+    gtag('config', 'G-1104N5GFNB');
   </script>
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
-    </a>
+    <a href="index.html"><img src="v.png" alt="V OK Health Insurance Logo" class="logo"/></a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
       <ul class="nav-links">
@@ -32,23 +28,20 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to V OK Health Insurance</h1>
-      <p>Your friend in health coverage — private, public, supplemental, and more.</p>
-      <a href="contact.html" class="btn">Get Your Free Consultation</a>
-    </section>
+  <section class="hero">
+    <h1>Health Coverage That Fits You</h1>
+    <a href="contact.html" class="btn">Book a Free Consultation</a>
+  </section>
 
-    <section class="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Private & Public Health Insurance</li>
-        <li>Life & Supplemental Coverage</li>
-        <li>Tax Credit Screening & Coverage Checks</li>
-        <li>Serving 33 States with United PPO Network</li>
-      </ul>
-    </section>
-  </main>
+  <section class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Private Health Plans (PPO)</li>
+      <li>Family & Individual Coverage</li>
+      <li>Life, Dental, Vision & Supplemental</li>
+      <li>Serving 33 States</li>
+    </ul>
+  </section>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
@@ -57,7 +50,6 @@
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
