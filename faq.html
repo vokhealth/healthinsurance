@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FAQ – V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Google Analytics -->
@@ -19,7 +19,7 @@
 <body>
   <header>
     <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
@@ -37,61 +37,34 @@
 
     <button class="collapsible">What is Medi-Share?</button>
     <div class="content">
-      <p>Medi-Share is a healthcare sharing ministry where members share medical expenses among each other. It's not traditional insurance but can be a cost-effective alternative for some.</p>
+      <p>Medi-Share is a healthcare sharing ministry where members share medical costs among each other. It’s not traditional insurance but can be a cost-effective alternative for some.</p>
     </div>
 
-    <button class="collapsible">What’s the difference between HMO and PPO plans?</button>
+    <button class="collapsible">What’s the difference between HMO and PPO?</button>
     <div class="content">
-      <p>HMO plans require you to use a specific network of doctors and need referrals to see specialists. PPO plans offer more flexibility to see out-of-network doctors without referrals but usually cost more.</p>
+      <p>HMO plans require you to use doctors within a network and get referrals for specialists, which often means lower costs. PPO plans offer more flexibility to see out-of-network providers but usually at higher costs.</p>
     </div>
 
     <button class="collapsible">When is Open Enrollment?</button>
     <div class="content">
-      <p>Open Enrollment for health insurance usually happens once a year, typically between November and December. It's the time when you can sign up for or change your health coverage for the upcoming year.</p>
+      <p>Open Enrollment is the yearly period when you can sign up for or change your health insurance plan without needing a qualifying event. It usually runs from November 1 to December 15.</p>
     </div>
 
     <button class="collapsible">What is a Special Enrollment Period?</button>
     <div class="content">
-      <p>A Special Enrollment Period allows you to enroll in or change your health insurance outside the Open Enrollment window if you experience qualifying life events like marriage, birth of a child, or loss of other coverage.</p>
+      <p>A Special Enrollment Period is a limited time outside Open Enrollment when you can sign up or change plans due to qualifying life events like marriage, birth of a child, or loss of other coverage.</p>
     </div>
 
-    <button class="collapsible">How do I know if I qualify for tax credits?</button>
+    <button class="collapsible">How do I know if I qualify for subsidies?</button>
     <div class="content">
-      <p>Tax credits depend on your household income and size. We help screen for eligibility during your free consultation to ensure you get the best value.</p>
+      <p>Subsidy eligibility depends on your household income and size. We can help screen and guide you on whether you qualify for financial assistance to lower your premiums.</p>
     </div>
 
-    <button class="collapsible">Can I keep my current doctors with your plans?</button>
+    <button class="collapsible">Can I keep my current doctors?</button>
     <div class="content">
-      <p>We work with plans that have strong networks, including the United PPO network, which has millions of doctors nationwide, so you can often keep your preferred providers.</p>
+      <p>We work with plans that include the United PPO network, giving you access to millions of doctors nationwide, so chances are good your doctors are covered.</p>
     </div>
-
   </section>
 
   <footer>
-    <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
-  </footer>
-
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // FAQ collapsible
-    const coll = document.querySelectorAll(".collapsible");
-    coll.forEach(button => {
-      button.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+    <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights
