@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FAQ – V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-1104N5GFNB');
+    gtag('config', 'G-492132828');
   </script>
 </head>
 <body>
   <header>
     <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
@@ -32,53 +32,36 @@
     </nav>
   </header>
 
-  <section class="faq-section">
+  <section class="faq-content">
     <h1>Frequently Asked Questions</h1>
 
-    <h2>Insurance 101</h2>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">What is Medi-Share?</button>
-      <div class="faq-answer" hidden>
-        <p>Medi-Share is a faith-based healthcare sharing ministry that allows members to share medical expenses with others. It is not traditional insurance but can be an alternative for some.</p>
+      <button class="faq-question">What is Medi-Share?</button>
+      <div class="faq-answer">
+        <p>Medi-Share is a healthcare sharing ministry where members share medical expenses. It’s not insurance but offers a community-based way to handle medical costs.</p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">What's the difference between HMO and PPO?</button>
-      <div class="faq-answer" hidden>
-        <p>HMO (Health Maintenance Organization) plans usually require you to choose a primary care doctor and get referrals to see specialists. PPO (Preferred Provider Organization) plans offer more flexibility to see specialists without referrals and typically have a larger network.</p>
+      <button class="faq-question">What’s the difference between HMO and PPO?</button>
+      <div class="faq-answer">
+        <p>HMO plans require you to choose a primary care doctor and get referrals to see specialists. PPO plans offer more flexibility, letting you see any provider without referrals but usually cost more.</p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">What is Open Enrollment?</button>
-      <div class="faq-answer" hidden>
-        <p>Open Enrollment is the yearly period when you can sign up for or change health insurance plans without needing a special reason. Outside this time, you generally need a qualifying event to enroll.</p>
+      <button class="faq-question">What is Open Enrollment?</button>
+      <div class="faq-answer">
+        <p>Open Enrollment is the yearly period when you can sign up for or change your health insurance plans without needing a special reason.</p>
       </div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">What is Special Enrollment?</button>
-      <div class="faq-answer" hidden>
-        <p>Special Enrollment Periods are times outside Open Enrollment when you can sign up for or change plans due to qualifying life events like marriage, having a baby, or losing other coverage.</p>
+      <button class="faq-question">What is Special Enrollment?</button>
+      <div class="faq-answer">
+        <p>Special Enrollment allows you to sign up for or change your insurance outside the Open Enrollment period if you have qualifying life events like marriage, birth of a child, or loss of coverage.</p>
       </div>
     </div>
-
-    <h2>Other Common Questions</h2>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">Do you offer coverage outside the 33 states?</button>
-      <div class="faq-answer" hidden>
-        <p>Currently, we operate in 33 states. For other locations, we can help guide you to other resources or local agents.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">Can I get help understanding my tax subsidies?</button>
-      <div class="faq-answer" hidden>
-        <p>Yes! We review your eligibility for tax credits and subsidies to help you get the best value for your insurance plan.</p>
-      </div>
-    </div>
-
   </section>
 
   <footer>
@@ -86,7 +69,6 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -94,18 +76,21 @@
       navLinks.classList.toggle('show');
     });
 
-    // FAQ accordion toggle
-    const faqButtons = document.querySelectorAll('.faq-question');
-
-    faqButtons.forEach(button => {
+    // FAQ collapsible
+    document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
         const answer = button.nextElementSibling;
-        if (answer.hasAttribute('hidden')) {
-          answer.removeAttribute('hidden');
+        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== "0px";
+        if (isOpen) {
+          answer.style.maxHeight = null;
+          button.classList.remove('open');
         } else {
-          answer.setAttribute('hidden', '');
+          // Close other open answers
+          document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = null);
+          document.querySelectorAll('.faq-question').forEach(btn => btn.classList.remove('open'));
+
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          button.classList.add('open');
         }
       });
     });
