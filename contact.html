@@ -1,20 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – V OK Health Insurance</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-492132828');
+    gtag('config', 'G-1104N5GFNB');
   </script>
 </head>
 <body>
@@ -34,23 +93,22 @@
   </header>
 
   <section class="contact-content">
-    <h1>Contact V OK Health Insurance</h1>
-    <p>Ready to find the best coverage for you? Reach out and let’s get started.</p>
-    
-    <form action="submit-form-url" method="POST" class="contact-form">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required />
+    <h1>Let’s Talk</h1>
+    <p>Tell me a little about your needs and I’ll reach out to set up a free consultation. No pressure, no spam.</p>
+    <form action="confirmation.html" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" />
+      <label for="state">What state do you live in?</label>
+      <input type="text" id="state" name="state" required>
 
-      <label for="message">Message or Questions</label>
+      <label for="message">Tell me what you're looking for:</label>
       <textarea id="message" name="message" rows="5"></textarea>
 
-      <button type="submit" class="btn-primary">Send Message</button>
+      <button type="submit">Send</button>
     </form>
   </section>
 
