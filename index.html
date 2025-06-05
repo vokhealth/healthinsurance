@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>V OK Health Insurance</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
@@ -33,42 +33,44 @@
   </header>
 
   <section class="hero">
-    <h1>Your Health Insurance, Simplified</h1>
-    <p>Helping you find coverage that fits your needs, budget, and lifestyle — with no pressure, no confusion.</p>
+    <h1>Your Health Insurance, Made Simple</h1>
+    <p>Licensed professionals helping you find the best coverage that fits your needs and budget.</p>
     <a href="contact.html" class="btn">Get a Free Consultation</a>
-
-    <div style="margin-top:40px;">
-      <!-- Calendly inline widget -->
-      <div
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/venusotero-usha/30min"
-        style="min-width:320px; height:630px;">
-      </div>
-      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    </div>
   </section>
 
   <section class="services">
-    <h2>What We Offer</h2>
+    <h2>Our Services</h2>
     <ul>
-      <li>Private Health Insurance Plans</li>
-      <li>Supplemental Coverage (dental, vision, accident, income protection)</li>
-      <li>Life Insurance Options</li>
-      <li>Screening for Tax Credits & Subsidies</li>
-      <li>Serving 33 States with Wide Doctor Networks</li>
+      <li>Private Health Insurance Plans with extensive networks</li>
+      <li>Supplemental Coverage: dental, vision, accident protection & more</li>
+      <li>Life Insurance tailored to your needs</li>
+      <li>Screening for tax credits & medication/provider coverage</li>
     </ul>
+  </section>
+
+  <section class="calendly-section">
+    <h2>Schedule a Free 30-Min Consultation</h2>
+    <div id="calendly-inline-widget" style="min-width:320px; height:630px;"></div>
   </section>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
   </footer>
 
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+    });
+
+    Calendly.initInlineWidget({
+      url: 'https://calendly.com/venusotero-usha/30min',
+      parentElement: document.getElementById('calendly-inline-widget'),
+      prefill: {},
+      utm: {}
     });
   </script>
 </body>
