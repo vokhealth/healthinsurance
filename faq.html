@@ -15,39 +15,6 @@
     gtag('js', new Date());
     gtag('config', 'G-1104N5GFNB');
   </script>
-
-  <style>
-    /* Collapsible FAQ styles */
-    .collapsible {
-      background-color: #f3f3f3;
-      color: #333;
-      cursor: pointer;
-      padding: 12px 20px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-weight: 600;
-      border-radius: 4px;
-      margin: 8px 0;
-      transition: background-color 0.3s ease;
-    }
-    .collapsible:hover {
-      background-color: #e0d6f0; /* blush pink-ish highlight */
-    }
-    .active, .collapsible:active {
-      background-color: #d4c1e0;
-    }
-    .content {
-      padding: 0 20px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      background-color: #fafafa;
-      border-radius: 0 0 4px 4px;
-      margin-bottom: 12px;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -68,42 +35,50 @@
   <section class="faq-section">
     <h1>Frequently Asked Questions</h1>
 
-    <button class="collapsible">What types of health insurance plans do you offer?</button>
-    <div class="content">
-      <p>We offer private health insurance plans, supplemental coverage (like dental, vision, accident), and life insurance options. We also help with public options if you qualify.</p>
-    </div>
-
-    <button class="collapsible">Can you help me check if my doctors and medications are covered?</button>
-    <div class="content">
-      <p>Absolutely! Before enrolling, we verify your doctors and medications to make sure your plan works for you.</p>
-    </div>
-
-    <button class="collapsible">Do you charge for consultations?</button>
-    <div class="content">
-      <p>Nope! Our consultations are free. We want you to feel confident and informed with no pressure or fees.</p>
-    </div>
-
     <h2>Insurance 101</h2>
-
-    <button class="collapsible">What is Medi-Share?</button>
-    <div class="content">
-      <p>Medi-Share is a healthcare sharing ministry where members share medical expenses. It’s not traditional insurance but can be a lower-cost option for some healthy individuals.</p>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is Medi-Share?</button>
+      <div class="faq-answer" hidden>
+        <p>Medi-Share is a faith-based healthcare sharing ministry that allows members to share medical expenses with others. It is not traditional insurance but can be an alternative for some.</p>
+      </div>
     </div>
 
-    <button class="collapsible">What’s the difference between HMO and PPO?</button>
-    <div class="content">
-      <p>HMOs require you to use a network of doctors and get referrals for specialists, usually at lower cost. PPOs give you more freedom to see any doctor, even out-of-network, but typically cost more.</p>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What's the difference between HMO and PPO?</button>
+      <div class="faq-answer" hidden>
+        <p>HMO (Health Maintenance Organization) plans usually require you to choose a primary care doctor and get referrals to see specialists. PPO (Preferred Provider Organization) plans offer more flexibility to see specialists without referrals and typically have a larger network.</p>
+      </div>
     </div>
 
-    <button class="collapsible">What is open enrollment?</button>
-    <div class="content">
-      <p>Open enrollment is the yearly period when anyone can sign up for or change their health insurance plan without needing a special reason.</p>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is Open Enrollment?</button>
+      <div class="faq-answer" hidden>
+        <p>Open Enrollment is the yearly period when you can sign up for or change health insurance plans without needing a special reason. Outside this time, you generally need a qualifying event to enroll.</p>
+      </div>
     </div>
 
-    <button class="collapsible">What is special enrollment?</button>
-    <div class="content">
-      <p>Special enrollment lets you sign up or change plans outside open enrollment if you’ve had certain life events, like getting married, having a baby, or losing other coverage.</p>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is Special Enrollment?</button>
+      <div class="faq-answer" hidden>
+        <p>Special Enrollment Periods are times outside Open Enrollment when you can sign up for or change plans due to qualifying life events like marriage, having a baby, or losing other coverage.</p>
+      </div>
     </div>
+
+    <h2>Other Common Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do you offer coverage outside the 33 states?</button>
+      <div class="faq-answer" hidden>
+        <p>Currently, we operate in 33 states. For other locations, we can help guide you to other resources or local agents.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can I get help understanding my tax subsidies?</button>
+      <div class="faq-answer" hidden>
+        <p>Yes! We review your eligibility for tax credits and subsidies to help you get the best value for your insurance plan.</p>
+      </div>
+    </div>
+
   </section>
 
   <footer>
@@ -111,22 +86,26 @@
   </footer>
 
   <script>
+    // Mobile menu toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
+
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
 
-    // Collapsible FAQ functionality
-    const collapsibles = document.querySelectorAll('.collapsible');
-    collapsibles.forEach(button => {
+    // FAQ accordion toggle
+    const faqButtons = document.querySelectorAll('.faq-question');
+
+    faqButtons.forEach(button => {
       button.addEventListener('click', () => {
-        button.classList.toggle('active');
-        const content = button.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        const answer = button.nextElementSibling;
+        if (answer.hasAttribute('hidden')) {
+          answer.removeAttribute('hidden');
         } else {
-          content.style.maxHeight = content.scrollHeight + "px";
+          answer.setAttribute('hidden', '');
         }
       });
     });
