@@ -8,13 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-492132828');
+    gtag('config', 'G-1104N5GFNB');
   </script>
 </head>
 <body>
@@ -33,28 +32,44 @@
     </nav>
   </header>
 
-  <section class="faq-content">
+  <section class="faq-section">
     <h1>Frequently Asked Questions</h1>
 
+    <div class="faq-item">
+      <button class="question">What plans do you offer?</button>
+      <div class="answer">We offer private health plans, supplemental coverage, life insurance, and access to the United PPO network (millions of providers).</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="question">Do you charge for consultations?</button>
+      <div class="answer">Nope! Our consultations are 100% free. We’ll help you understand your options and choose a plan that works for you.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="question">What states do you serve?</button>
+      <div class="answer">We’re licensed in 33 states including TX, FL, GA, CA, NC, IL, and many more.</div>
+    </div>
+
     <h2>Insurance 101</h2>
-    <button class="faq-toggle">What is Medi-Share?</button>
-    <div class="faq-answer">
-      <p>Medi-Share is a healthcare sharing ministry that allows members to share medical expenses. It is not traditional insurance but can be an alternative for some.</p>
+
+    <div class="faq-item">
+      <button class="question">What’s Medi-Share?</button>
+      <div class="answer">Medi-Share is a health care sharing ministry, not traditional insurance. Members share medical costs, but it doesn’t guarantee coverage like a regular health plan.</div>
     </div>
 
-    <button class="faq-toggle">What is the difference between HMO and PPO?</button>
-    <div class="faq-answer">
-      <p>HMO plans require you to use doctors within a network and often need referrals to see specialists. PPO plans offer more flexibility with providers and don’t usually require referrals.</p>
+    <div class="faq-item">
+      <button class="question">HMO vs PPO — what’s the difference?</button>
+      <div class="answer">HMO plans typically require referrals and only cover in-network care. PPO plans give you more doctor freedom and often include out-of-network options.</div>
     </div>
 
-    <button class="faq-toggle">What is open enrollment?</button>
-    <div class="faq-answer">
-      <p>Open enrollment is a specific time period each year when you can sign up for or change your health insurance plan.</p>
+    <div class="faq-item">
+      <button class="question">What is open enrollment?</button>
+      <div class="answer">It’s the time of year when you can enroll in ACA plans (usually Nov–Jan). Outside of that, you need a special reason (like losing coverage) to enroll.</div>
     </div>
 
-    <button class="faq-toggle">What is special enrollment?</button>
-    <div class="faq-answer">
-      <p>Special enrollment periods allow you to sign up for health insurance outside the open enrollment window due to qualifying life events like marriage, having a baby, or losing other coverage.</p>
+    <div class="faq-item">
+      <button class="question">What is a special enrollment period?</button>
+      <div class="answer">It’s a 60-day window to enroll after a life event—like losing a job, getting married, or moving states.</div>
     </div>
   </section>
 
@@ -65,22 +80,16 @@
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
 
-    // FAQ toggle logic
-    const faqToggles = document.querySelectorAll('.faq-toggle');
-    faqToggles.forEach(button => {
-      button.addEventListener('click', () => {
-        button.classList.toggle('active');
-        const answer = button.nextElementSibling;
-        if (answer.style.maxHeight) {
-          answer.style.maxHeight = null;
-        } else {
-          answer.style.maxHeight = answer.scrollHeight + "px";
-        }
+    const questions = document.querySelectorAll(".question");
+    questions.forEach((q) => {
+      q.addEventListener("click", () => {
+        q.classList.toggle("active");
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
       });
     });
   </script>
