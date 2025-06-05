@@ -2,73 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ's – V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <meta name="description" content="Frequently asked questions about health insurance coverage, Medi-Share, HMO vs PPO, open enrollment, and more." />
-  <meta name="keywords" content="Health Insurance FAQ, Medi-Share, HMO vs PPO, Open Enrollment, Special Enrollment" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMZ7Z226BF"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ – V OK Health Insurance</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-GMZ7Z226BF');
+
+    gtag('config', 'G-492132828');
   </script>
-  <style>
-    /* Basic styles for collapsible FAQ */
-    .faq-section {
-      max-width: 700px;
-      margin: 2rem auto;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #3b3937;
-    }
-    .collapsible {
-      background-color: #f8c8d8; /* blush pink accent */
-      color: #3b3937;
-      cursor: pointer;
-      padding: 1rem 1.5rem;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
-      transition: background-color 0.3s ease;
-    }
-    .collapsible:hover,
-    .collapsible.active {
-      background-color: #f4a1b8;
-    }
-    .content {
-      padding: 0 1.5rem 1rem 1.5rem;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      background-color: #fff0f5;
-      border-radius: 0 0 5px 5px;
-      margin-bottom: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #555;
-    }
-  </style>
 </head>
 <body>
   <header>
     <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
     </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -77,88 +33,53 @@
     </nav>
   </header>
 
-  <main>
-    <section class="faq-section">
-      <h1>Frequently Asked Questions</h1>
+  <section class="faq-content">
+    <h1>Frequently Asked Questions</h1>
 
-      <button class="collapsible">What types of health insurance plans do you offer?</button>
-      <div class="content">
-        <p>I provide a variety of plans including catastrophic coverage, income protection, accident insurance, dental, vision, and more—customized to fit your needs and budget.</p>
-      </div>
+    <h2>Insurance 101</h2>
+    <button class="faq-toggle">What is Medi-Share?</button>
+    <div class="faq-answer">
+      <p>Medi-Share is a healthcare sharing ministry that allows members to share medical expenses. It is not traditional insurance but can be an alternative for some.</p>
+    </div>
 
-      <button class="collapsible">How do I know which plan is right for me?</button>
-      <div class="content">
-        <p>I’ll help you understand your options by breaking down the benefits, costs, and coverage details, so you can make an informed choice that suits your situation and lifestyle.</p>
-      </div>
+    <button class="faq-toggle">What is the difference between HMO and PPO?</button>
+    <div class="faq-answer">
+      <p>HMO plans require you to use doctors within a network and often need referrals to see specialists. PPO plans offer more flexibility with providers and don’t usually require referrals.</p>
+    </div>
 
-      <button class="collapsible">Can I keep my current doctors with a new plan?</button>
-      <div class="content">
-        <p>Yes! I’ll check to make sure your preferred doctors and medications are covered before you commit to a plan.</p>
-      </div>
+    <button class="faq-toggle">What is open enrollment?</button>
+    <div class="faq-answer">
+      <p>Open enrollment is a specific time period each year when you can sign up for or change your health insurance plan.</p>
+    </div>
 
-      <button class="collapsible">What if I’m self-employed or run a small business?</button>
-      <div class="content">
-        <p>I specialize in working with self-employed individuals and small business owners to find plans that offer the best value and protection.</p>
-      </div>
-
-      <button class="collapsible">Do you offer ongoing support after I enroll?</button>
-      <div class="content">
-        <p>Absolutely. I’m here for you throughout the lifetime of your policy to answer questions, help with claims, or review your coverage as your needs change.</p>
-      </div>
-
-      <button class="collapsible">How can I communicate with you?</button>
-      <div class="content">
-        <p>You can reach me via text, email, phone calls—whatever works best for you!</p>
-      </div>
-
-      <button class="collapsible">What if I have a limited budget?</button>
-      <div class="content">
-        <p>We’ll work together to find the best coverage options that fit within your budget without sacrificing essential benefits.</p>
-      </div>
-
-      <button class="collapsible">What if I need coverage outside of the open enrollment period?</button>
-      <div class="content">
-        <p>There are special enrollment periods for qualifying life events like marriage, having a baby, or losing other coverage. I can help you navigate those options.</p>
-      </div>
-
-      <h2 style="margin-top:3rem; color:#3b3937;">Insurance 101</h2>
-
-      <button class="collapsible">What is Medi-Share?</button>
-      <div class="content">
-        <p>Medi-Share is a health care sharing ministry where members share medical expenses with one another instead of using traditional insurance. It's faith-based and can be a lower-cost alternative but comes with some limitations.</p>
-      </div>
-
-      <button class="collapsible">What is the difference between HMO and PPO?</button>
-      <div class="content">
-        <p>HMO (Health Maintenance Organization) plans usually require you to see doctors within a network and get referrals for specialists. PPO (Preferred Provider Organization) plans offer more flexibility to see out-of-network providers but usually at higher cost.</p>
-      </div>
-
-      <button class="collapsible">What is Open Enrollment?</button>
-      <div class="content">
-        <p>Open Enrollment is a yearly period when anyone can sign up for or change health insurance plans. Outside this window, you typically can only enroll if you qualify for a Special Enrollment Period.</p>
-      </div>
-
-      <button class="collapsible">What is a Special Enrollment Period?</button>
-      <div class="content">
-        <p>A Special Enrollment Period allows you to sign up for health insurance outside of Open Enrollment if you experience qualifying life events like marriage, birth of a child, loss of other coverage, or moving to a new area.</p>
-      </div>
-    </section>
-  </main>
+    <button class="faq-toggle">What is special enrollment?</button>
+    <div class="faq-answer">
+      <p>Special enrollment periods allow you to sign up for health insurance outside the open enrollment window due to qualifying life events like marriage, having a baby, or losing other coverage.</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
   </footer>
 
   <script>
-    const collapsibles = document.querySelectorAll(".collapsible");
-    collapsibles.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        btn.classList.toggle("active");
-        const content = btn.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // FAQ toggle logic
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const answer = button.nextElementSibling;
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
         } else {
-          content.style.maxHeight = content.scrollHeight + "px";
+          answer.style.maxHeight = answer.scrollHeight + "px";
         }
       });
     });
