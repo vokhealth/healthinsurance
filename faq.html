@@ -2,25 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FAQ – V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-492132828');
+    gtag('config', 'G-1104N5GFNB');
   </script>
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
-    </a>
+    <a href="index.html"><img src="v.png" alt="V OK Health Insurance Logo" class="logo"/></a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
       <ul class="nav-links">
@@ -32,35 +28,27 @@
     </nav>
   </header>
 
-  <section class="faq-content">
+  <section class="faq">
     <h1>Frequently Asked Questions</h1>
 
-    <div class="faq-item">
-      <button class="faq-question">What is Medi-Share?</button>
-      <div class="faq-answer">
-        <p>Medi-Share is a healthcare sharing ministry where members share medical expenses. It’s not insurance but offers a community-based way to handle medical costs.</p>
-      </div>
+    <button class="collapsible">What’s the difference between PPO and HMO?</button>
+    <div class="content">
+      <p>PPOs offer more doctor flexibility and don’t require referrals. HMOs are cheaper but have a smaller network and require referrals.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-question">What’s the difference between HMO and PPO?</button>
-      <div class="faq-answer">
-        <p>HMO plans require you to choose a primary care doctor and get referrals to see specialists. PPO plans offer more flexibility, letting you see any provider without referrals but usually cost more.</p>
-      </div>
+    <button class="collapsible">What is Open Enrollment?</button>
+    <div class="content">
+      <p>Open Enrollment is the set window (usually in the fall) where you can enroll or change health insurance plans.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-question">What is Open Enrollment?</button>
-      <div class="faq-answer">
-        <p>Open Enrollment is the yearly period when you can sign up for or change your health insurance plans without needing a special reason.</p>
-      </div>
+    <button class="collapsible">What if I missed Open Enrollment?</button>
+    <div class="content">
+      <p>You may qualify for Special Enrollment due to life events like moving, losing coverage, or getting married.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-question">What is Special Enrollment?</button>
-      <div class="faq-answer">
-        <p>Special Enrollment allows you to sign up for or change your insurance outside the Open Enrollment period if you have qualifying life events like marriage, birth of a child, or loss of coverage.</p>
-      </div>
+    <button class="collapsible">What is Medi-Share?</button>
+    <div class="content">
+      <p>Medi-Share is a Christian health-sharing program. It’s not insurance, but members share each other’s medical expenses.</p>
     </div>
   </section>
 
@@ -71,29 +59,18 @@
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
 
-    // FAQ collapsible
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== "0px";
-        if (isOpen) {
-          answer.style.maxHeight = null;
-          button.classList.remove('open');
-        } else {
-          // Close other open answers
-          document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = null);
-          document.querySelectorAll('.faq-question').forEach(btn => btn.classList.remove('open'));
-
-          answer.style.maxHeight = answer.scrollHeight + "px";
-          button.classList.add('open');
-        }
-      });
-    });
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(btn =>
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      })
+    );
   </script>
 </body>
 </html>
