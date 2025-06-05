@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FAQ – V OK Health Insurance</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
@@ -19,7 +19,7 @@
 <body>
   <header>
     <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
@@ -35,36 +35,73 @@
   <section class="faq">
     <h1>Frequently Asked Questions</h1>
 
+    <!-- Insurance 101 -->
+    <h2>Insurance 101</h2>
+
     <button class="collapsible">What is Medi-Share?</button>
     <div class="content">
-      <p>Medi-Share is a healthcare sharing ministry where members share medical costs among each other. It’s not traditional insurance but can be a cost-effective alternative for some.</p>
+      <p>Medi-Share is a health care sharing ministry, not traditional insurance. Members share medical costs among themselves but it's not regulated like insurance.</p>
     </div>
 
     <button class="collapsible">What’s the difference between HMO and PPO?</button>
     <div class="content">
-      <p>HMO plans require you to use doctors within a network and get referrals for specialists, which often means lower costs. PPO plans offer more flexibility to see out-of-network providers but usually at higher costs.</p>
+      <p>HMO plans require you to use in-network providers and get referrals to see specialists. PPO plans offer more flexibility to see out-of-network doctors without referrals but usually cost more.</p>
     </div>
 
-    <button class="collapsible">When is Open Enrollment?</button>
+    <button class="collapsible">What is Open Enrollment?</button>
     <div class="content">
-      <p>Open Enrollment is the yearly period when you can sign up for or change your health insurance plan without needing a qualifying event. It usually runs from November 1 to December 15.</p>
+      <p>Open Enrollment is the yearly period when you can sign up for or change health insurance plans without needing a qualifying event.</p>
     </div>
 
-    <button class="collapsible">What is a Special Enrollment Period?</button>
+    <button class="collapsible">What is Special Enrollment?</button>
     <div class="content">
-      <p>A Special Enrollment Period is a limited time outside Open Enrollment when you can sign up or change plans due to qualifying life events like marriage, birth of a child, or loss of other coverage.</p>
+      <p>Special Enrollment is a limited time outside Open Enrollment to sign up or change plans due to qualifying life events like marriage, having a baby, or losing other coverage.</p>
     </div>
 
-    <button class="collapsible">How do I know if I qualify for subsidies?</button>
+    <!-- Additional FAQs -->
+    <h2>More Questions</h2>
+
+    <button class="collapsible">Do you offer plans in my state?</button>
     <div class="content">
-      <p>Subsidy eligibility depends on your household income and size. We can help screen and guide you on whether you qualify for financial assistance to lower your premiums.</p>
+      <p>We serve 33 states including MT, NV, AZ, UT, CO, WY, SD, NE, KS, OK, TX, LA, AR, MO, IA, WI, IL, MS, TN, KY, IN, MI, OH, AL, GA, FL, SC, NC, VA, WV, DE, MD, PA.</p>
     </div>
 
-    <button class="collapsible">Can I keep my current doctors?</button>
+    <button class="collapsible">Can I get a plan if I take multiple medications?</button>
     <div class="content">
-      <p>We work with plans that include the United PPO network, giving you access to millions of doctors nationwide, so chances are good your doctors are covered.</p>
+      <p>We generally work with clients on 3 or fewer medications. We want to ensure the plans we offer will cover your prescriptions well.</p>
+    </div>
+
+    <button class="collapsible">How do I schedule a consultation?</button>
+    <div class="content">
+      <p>You can use the Calendly link on our homepage or contact page to book a free 30-minute consultation with Venus.</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights
+    <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // FAQ collapsible
+    const coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
