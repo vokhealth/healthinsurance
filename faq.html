@@ -1,59 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAQ – V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
-    </a>
-    <nav>
-      <div class="menu-toggle">&#9776;</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html" class="active">FAQ</a></li>
-      </ul>
-    </nav>
-  </header>
+<section class="faq-section">
+  <h1>Frequently Asked Questions</h1>
 
-  <section class="faq">
-    <h1>FAQ’s</h1>
+  <button class="collapsible">What types of health insurance plans do you offer?</button>
+  <div class="content">
+    <p>I provide a variety of plans including catastrophic coverage, income protection, accident insurance, dental, vision, and more—customized to fit your needs and budget.</p>
+  </div>
 
-    <button class="collapsible">What is Medi-Share?</button>
-    <div class="content"><p>Medi-Share is a Christian health-sharing program where members contribute monthly and share each other's medical costs. It’s not traditional insurance.</p></div>
+  <button class="collapsible">How do I know which plan is right for me?</button>
+  <div class="content">
+    <p>I’ll help you understand your options by breaking down the benefits, costs, and coverage details, so you can make an informed choice that suits your situation and lifestyle.</p>
+  </div>
 
-    <button class="collapsible">HMO vs PPO: What's the difference?</button>
-    <div class="content"><p>HMOs require you to stay within a provider network and need referrals. PPOs offer more flexibility in choosing providers and usually don’t require referrals.</p></div>
+  <button class="collapsible">Can I keep my current doctors with a new plan?</button>
+  <div class="content">
+    <p>Yes! I’ll check to make sure your preferred doctors and medications are covered before you commit to a plan.</p>
+  </div>
 
-    <button class="collapsible">What is Open Enrollment?</button>
-    <div class="content"><p>Open Enrollment is the annual period when you can enroll in a health insurance plan—typically from Nov 1 to Jan 15.</p></div>
+  <button class="collapsible">What if I’m self-employed or run a small business?</button>
+  <div class="content">
+    <p>I specialize in working with self-employed individuals and small business owners to find plans that offer the best value and protection.</p>
+  </div>
 
-    <button class="collapsible">Who qualifies for Special Enrollment?</button>
-    <div class="content"><p>You may qualify if you’ve had a major life event like losing other coverage, getting married, having a baby, or moving to a new ZIP code.</p></div>
-  </section>
+  <button class="collapsible">Do you offer ongoing support after I enroll?</button>
+  <div class="content">
+    <p>Absolutely. I’m here for you throughout the lifetime of your policy to answer questions, help with claims, or review your coverage as your needs change.</p>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
-  </footer>
+  <button class="collapsible">How can I communicate with you?</button>
+  <div class="content">
+    <p>You can reach me via text, email, phone calls—whatever works best for you!</p>
+  </div>
 
-  <script>
-    document.querySelector('.menu-toggle').onclick = () => {
-      document.querySelector('.nav-links').classList.toggle('show');
-    };
-    document.querySelectorAll(".collapsible").forEach(button => {
-      button.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-      });
-    });
-  </script>
-</body>
-</html>
+  <button class="collapsible">What if I have a limited budget?</button>
+  <div class="content">
+    <p>We’ll work together to find the best coverage options that fit within your budget without sacrificing essential benefits.</p>
+  </div>
+
+  <button class="collapsible">What if I need coverage outside of the open enrollment period?</button>
+  <div class="content">
+    <p>There are special enrollment periods for qualifying life events like marriage, having a baby, or losing other coverage. I can help you navigate those options.</p>
+  </div>
+</section>
