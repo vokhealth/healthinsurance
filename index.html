@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home – V OK Health Insurance</title>
+  <title>V OK Health Insurance</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-492132828');
+    gtag('config', 'G-1104N5GFNB');
   </script>
 </head>
 <body>
@@ -33,12 +32,26 @@
     </nav>
   </header>
 
-  <main class="home-content">
-    <h1>Welcome to V OK Health Insurance</h1>
-    <p>Your trusted partner in finding health coverage tailored to your needs and budget. Serving 33 states with expert knowledge and personal service.</p>
-    <p>Get free consultations on private and public insurance plans that cover your doctors and medications, and help you find any tax subsidies you qualify for.</p>
-    <a href="contact.html" class="btn-primary">Schedule Your Free Consultation</a>
-  </main>
+  <section class="hero">
+    <h1>Feel V OK About Your Health Coverage</h1>
+    <p>Licensed in 33 states. Private plans, tax help, doctor access, and a real human to walk you through it.</p>
+    <a href="contact.html" class="cta-button">Book a Free Consultation</a>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Private & Public Plans</h2>
+      <p>We’ll check both — so you don’t miss savings or flexibility.</p>
+    </div>
+    <div class="feature">
+      <h2>Doctor & Medication Lookup</h2>
+      <p>We make sure your needs are covered before you enroll.</p>
+    </div>
+    <div class="feature">
+      <h2>Free Help</h2>
+      <p>No fees. No pressure. Just real advice from a licensed pro.</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
@@ -47,7 +60,6 @@
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
