@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,7 +18,9 @@
 </head>
 <body>
   <header>
-    <a href="index.html"><img src="v.png" alt="V OK Health Insurance Logo" class="logo"/></a>
+    <a href="index.html">
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
+    </a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
       <ul class="nav-links">
@@ -29,30 +33,49 @@
   </header>
 
   <section class="hero">
-    <h1>Health Coverage That Fits You</h1>
-    <a href="contact.html" class="btn">Book a Free Consultation</a>
+    <h1>Your Health Insurance, Made Simple & Personal</h1>
+    <p>Serving 33 states with private and public health plans that fit your life and budget.</p>
+    <a href="contact.html" class="btn">Get a Free Consultation</a>
   </section>
 
   <section class="services">
-    <h2>Our Services</h2>
+    <h2>What We Offer</h2>
     <ul>
-      <li>Private Health Plans (PPO)</li>
-      <li>Family & Individual Coverage</li>
-      <li>Life, Dental, Vision & Supplemental</li>
-      <li>Serving 33 States</li>
+      <li>Private & Public Health Insurance</li>
+      <li>Supplemental Coverage (Dental, Vision, Accident)</li>
+      <li>Life Insurance Protection</li>
+      <li>Personalized Plan Reviews & Tax Credit Checks</li>
     </ul>
+  </section>
+
+  <section class="calendly-embed" style="max-width: 600px; margin: 40px auto;">
+    <h2>Schedule Your Free Consultation</h2>
+    <!-- Calendly inline widget -->
+    <div id="calendly-inline-widget" style="min-width:320px;height:630px;"></div>
   </section>
 
   <footer>
     <p>&copy; 2025 V OK Health Insurance — Serving 33 States | All rights reserved.</p>
   </footer>
 
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
+
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
+
+    // Initialize Calendly widget inline
+    window.onload = function() {
+      Calendly.initInlineWidget({
+        url: 'https://calendly.com/vokhealth/free-consultation',
+        parentElement: document.getElementById('calendly-inline-widget'),
+        prefill: {},
+        utm: {}
+      });
+    };
   </script>
 </body>
 </html>
