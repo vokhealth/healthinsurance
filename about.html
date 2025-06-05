@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About – V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-492132828');
+    gtag('config', 'G-1104N5GFNB');
   </script>
 </head>
 <body>
   <header>
     <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
@@ -56,11 +56,22 @@
   </footer>
 
   <script>
+    // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+    });
+
+    // FAQ collapsible behavior (if any FAQ section is added later)
+    const faqButtons = document.querySelectorAll('.faq button.collapsible');
+
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.classList.toggle('active');
+      });
     });
   </script>
 </body>
