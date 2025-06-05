@@ -15,6 +15,39 @@
     gtag('js', new Date());
     gtag('config', 'G-1104N5GFNB');
   </script>
+
+  <style>
+    /* Collapsible FAQ styles */
+    .collapsible {
+      background-color: #f3f3f3;
+      color: #333;
+      cursor: pointer;
+      padding: 12px 20px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-weight: 600;
+      border-radius: 4px;
+      margin: 8px 0;
+      transition: background-color 0.3s ease;
+    }
+    .collapsible:hover {
+      background-color: #e0d6f0; /* blush pink-ish highlight */
+    }
+    .active, .collapsible:active {
+      background-color: #d4c1e0;
+    }
+    .content {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: #fafafa;
+      border-radius: 0 0 4px 4px;
+      margin-bottom: 12px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -35,41 +68,41 @@
   <section class="faq-section">
     <h1>Frequently Asked Questions</h1>
 
-    <div class="faq-item">
-      <button class="question">What plans do you offer?</button>
-      <div class="answer">We offer private health plans, supplemental coverage, life insurance, and access to the United PPO network (millions of providers).</div>
+    <button class="collapsible">What types of health insurance plans do you offer?</button>
+    <div class="content">
+      <p>We offer private health insurance plans, supplemental coverage (like dental, vision, accident), and life insurance options. We also help with public options if you qualify.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="question">Do you charge for consultations?</button>
-      <div class="answer">Nope! Our consultations are 100% free. We’ll help you understand your options and choose a plan that works for you.</div>
+    <button class="collapsible">Can you help me check if my doctors and medications are covered?</button>
+    <div class="content">
+      <p>Absolutely! Before enrolling, we verify your doctors and medications to make sure your plan works for you.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="question">What states do you serve?</button>
-      <div class="answer">We’re licensed in 33 states including TX, FL, GA, CA, NC, IL, and many more.</div>
+    <button class="collapsible">Do you charge for consultations?</button>
+    <div class="content">
+      <p>Nope! Our consultations are free. We want you to feel confident and informed with no pressure or fees.</p>
     </div>
 
     <h2>Insurance 101</h2>
 
-    <div class="faq-item">
-      <button class="question">What’s Medi-Share?</button>
-      <div class="answer">Medi-Share is a health care sharing ministry, not traditional insurance. Members share medical costs, but it doesn’t guarantee coverage like a regular health plan.</div>
+    <button class="collapsible">What is Medi-Share?</button>
+    <div class="content">
+      <p>Medi-Share is a healthcare sharing ministry where members share medical expenses. It’s not traditional insurance but can be a lower-cost option for some healthy individuals.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="question">HMO vs PPO — what’s the difference?</button>
-      <div class="answer">HMO plans typically require referrals and only cover in-network care. PPO plans give you more doctor freedom and often include out-of-network options.</div>
+    <button class="collapsible">What’s the difference between HMO and PPO?</button>
+    <div class="content">
+      <p>HMOs require you to use a network of doctors and get referrals for specialists, usually at lower cost. PPOs give you more freedom to see any doctor, even out-of-network, but typically cost more.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="question">What is open enrollment?</button>
-      <div class="answer">It’s the time of year when you can enroll in ACA plans (usually Nov–Jan). Outside of that, you need a special reason (like losing coverage) to enroll.</div>
+    <button class="collapsible">What is open enrollment?</button>
+    <div class="content">
+      <p>Open enrollment is the yearly period when anyone can sign up for or change their health insurance plan without needing a special reason.</p>
     </div>
 
-    <div class="faq-item">
-      <button class="question">What is a special enrollment period?</button>
-      <div class="answer">It’s a 60-day window to enroll after a life event—like losing a job, getting married, or moving states.</div>
+    <button class="collapsible">What is special enrollment?</button>
+    <div class="content">
+      <p>Special enrollment lets you sign up or change plans outside open enrollment if you’ve had certain life events, like getting married, having a baby, or losing other coverage.</p>
     </div>
   </section>
 
@@ -84,12 +117,17 @@
       navLinks.classList.toggle('show');
     });
 
-    const questions = document.querySelectorAll(".question");
-    questions.forEach((q) => {
-      q.addEventListener("click", () => {
-        q.classList.toggle("active");
-        const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === "block" ? "none" : "block";
+    // Collapsible FAQ functionality
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const content = button.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
       });
     });
   </script>
