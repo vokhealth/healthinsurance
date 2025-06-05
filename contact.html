@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact – V OK Health Insurance</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-492132828"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1104N5GFNB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-492132828');
+    gtag('config', 'G-1104N5GFNB');
   </script>
 </head>
 <body>
   <header>
     <a href="index.html">
-      <img src="v.png" alt="V OK Health Insurance Logo" class="logo" />
+      <img src="v.png" alt="V OK Health Insurance Logo" class="logo"/>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <nav>
@@ -33,23 +33,19 @@
   </header>
 
   <section class="contact-content">
-    <h1>Contact Us</h1>
-    <p>Have questions or want to schedule your free consultation? Reach out anytime — I’m here to help.</p>
-
-    <form action="submit_form.php" method="POST">
-      <label for="name">Full Name</label>
+    <h1>Get in Touch</h1>
+    <p>Have questions about your insurance options? Fill out the form below or schedule a free consultation. We’re here to help you make confident choices.</p>
+    <form action="confirmation.html" method="post">
+      <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
-      <label for="email">Email Address</label>
+      <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" />
-
-      <label for="message">Your Message</label>
+      <label for="message">Message</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit">Send</button>
     </form>
   </section>
 
